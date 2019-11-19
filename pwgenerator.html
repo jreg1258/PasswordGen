@@ -19,7 +19,7 @@ function allTrue() {
         var randNum = Math.floor(math.random() * stringLength)
         randString += specials.substring(randNum,randNum+1);
 } documentwrite.randString 
-}
+};
 
 
 alert("Password Generator!")
@@ -40,13 +40,16 @@ var numChar=confirm("Would you like to include numbers?")
 var upChar=confirm("Would you like to include uppercase characters as well?")
 } while (spChar===false && numChar===false && upChar===false)
 
-alert("Settings confirmed, generating password now")
+    alert("Settings confirmed, generating password now")
 
-for (var i=0;i<pwLength;i++) {
-    if (spChar===true) && (numChar===true) && (upChar===true) {
-
+    if (spChar===true && numChar===true && upChar===true) {
+        allTrue() 
+    } else {
+        alert("issue")
     }
-}
+
+
+    
         
         </script>
 
