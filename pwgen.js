@@ -119,5 +119,6 @@ var upChar=confirm("Would you like to include uppercase characters as well?")
         upTrue()
     }
 
+    document.getElementById("pwDone").innerHTML === randString
 
     
