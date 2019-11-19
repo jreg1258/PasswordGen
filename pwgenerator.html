@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+alert("Password Generator!")
+alert("You must choose between 8-128 chars, and at least one special variant for your password!")
+
+
+
+var pwLength = prompt("Pick a length between 8 and 128 characters: ")
+
+while (pwLength < 8 || pwLength > 128) {
+    prompt("You must choose between 8 and 128 characters: ")
+}
+
+do {
+    alert()
+var spChar=confirm("Would you like to include special characters?")
+var numChar=confirm("Would you like to include numbers?")
+var upChar=confirm("Would you like to include uppercase characters as well?")
+} while (spChar===false && numChar===false && upChar===false)
+
+alert("Settings confirmed, generating password now")
+        
+        </script>
+
+</body>
+</html>
