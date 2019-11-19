@@ -1,3 +1,5 @@
+
+var pwGen = {
 function allTrue() {
     var specials = ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
     var stringLength = pwLength
@@ -67,6 +69,7 @@ function upTrue() {
         var randNum = Math.floor(Math.random() * stringLength)
         randString += specials.toString().substring(randNum,randNum+1)
         } document.write(randString)
+}
 }
 
 function copyPass() {
