@@ -103,7 +103,7 @@ var upChar=confirm("Would you like to include uppercase characters as well?")
     alert("Settings confirmed, generating password now")
 
     if (spChar===true && numChar===true && upChar===true) {
-       document.getElementById('divid').innerHTML = allTrue()
+        allTrue()
     } else if (spChar===true && numChar===false && upChar===true) {
         spUpCharTrue()
     } else if (spChar===false && numChar===true && upChar===true) {
