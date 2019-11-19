@@ -5,7 +5,7 @@ function allTrue() {
     for (var i=0;i < stringLength; i++) {
         var randNum = Math.floor(Math.random() * stringLength)
         randString += specials.toString().substring(randNum,randNum+1)
-        } console.log(randString)
+        } document.write(randString)
 }
 
 function spUpCharTrue() {
@@ -15,7 +15,7 @@ function spUpCharTrue() {
     for (var i=0;i < stringLength; i++) {
         var randNum = Math.floor(Math.random() * stringLength)
         randString += specials.toString().substring(randNum,randNum+1)
-        } console.log(randString)
+        } document.write(randString)
 }
 
 function numUpCharTrue() {
@@ -25,7 +25,7 @@ function numUpCharTrue() {
     for (var i=0;i < stringLength; i++) {
         var randNum = Math.floor(Math.random() * stringLength)
         randString += specials.toString().substring(randNum,randNum+1)
-        } console.log(randString)
+        } document.write(randString)
 } 
 
 function spNumCharTrue() {
@@ -35,7 +35,7 @@ function spNumCharTrue() {
     for (var i=0;i < stringLength; i++) {
         var randNum = Math.floor(Math.random() * stringLength)
         randString += specials.toString().substring(randNum,randNum+1)
-        } console.log(randString)
+        } document.write(randString)
 }
 
 function spTrue() {
@@ -45,7 +45,7 @@ function spTrue() {
     for (var i=0;i < stringLength; i++) {
         var randNum = Math.floor(Math.random() * stringLength)
         randString += specials.toString().substring(randNum,randNum+1)
-        } console.log(randString)
+        } document.write(randString)
 }
 
 function numTrue() {
@@ -55,7 +55,7 @@ function numTrue() {
     for (var i=0;i < stringLength; i++) {
         var randNum = Math.floor(Math.random() * stringLength)
         randString += specials.toString().substring(randNum,randNum+1)
-        } console.log(randString)
+        } document.write(randString)
 }
 
 function upTrue() {
@@ -65,7 +65,7 @@ function upTrue() {
     for (var i=0;i < stringLength; i++) {
         var randNum = Math.floor(Math.random() * stringLength)
         randString += specials.toString().substring(randNum,randNum+1)
-        } console.log(randString)
+        } document.write(randString)
 }
 
 function copyPass() {
