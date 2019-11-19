@@ -34,7 +34,6 @@ while (pwLength < 8 || pwLength > 128) {
 }
 
 do {
-    alert()
 var spChar=confirm("Would you like to include special characters?")
 var numChar=confirm("Would you like to include numbers?")
 var upChar=confirm("Would you like to include uppercase characters as well?")
@@ -43,7 +42,7 @@ var upChar=confirm("Would you like to include uppercase characters as well?")
     alert("Settings confirmed, generating password now")
 
     if (spChar===true && numChar===true && upChar===true) {
-        allTrue() 
+        console.log(allTrue()) 
     } else {
         alert("issue")
     }
