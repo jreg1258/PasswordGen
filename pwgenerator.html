@@ -39,6 +39,16 @@ function numUpCharTrue() {
         var randNum = Math.floor(Math.random() * stringLength)
         randString += specials.toString().substring(randNum,randNum+1)
         } console.log(randString)
+} 
+
+function spNumCharTrue() {
+    var specials = ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyz"]
+    var stringLength = pwLength
+    var randString = " "
+    for (var i=0;i < stringLength; i++) {
+        var randNum = Math.floor(Math.random() * stringLength)
+        randString += specials.toString().substring(randNum,randNum+1)
+        } console.log(randString)
 }
 
 
@@ -66,9 +76,9 @@ var upChar=confirm("Would you like to include uppercase characters as well?")
     } else if (spChar===true && numChar===false && upChar===true) {
         spUpCharTrue()
     } else if (spChar===false && numChar===true && upChar===true) {
-
+        numUpCharTrue()
     } else if (spChar===true && numChar===true && upChar===false) {
-
+        spNumCharTrue()
     } else {
         
     }
