@@ -9,11 +9,16 @@
 <body>
     
     <script>
+
+
 function allTrue() {
-    specials : ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
-    stringLength :
-    randNum : math.floor
-    randString:
+    var specials = ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+    var stringLength = pwLength
+    var randString = " "
+    for (var i=0;i < stringLength; i++) {
+        var randNum = Math.floor(math.random() * stringLength)
+        randString += specials.substring(randNum,randNum+1);
+} documentwrite.randString 
 }
 
 
