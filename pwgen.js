@@ -6,6 +6,7 @@ function allTrue() {
         var randNum = Math.floor(Math.random() * stringLength)
         randString += specials.toString().substring(randNum,randNum+1)
         } document.write(randString)
+            console.log(randString)
 }
 
 function spUpCharTrue() {
