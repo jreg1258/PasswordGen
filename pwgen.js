@@ -67,3 +67,41 @@ function upTrue() {
         randString += specials.toString().substring(randNum,randNum+1)
         } console.log(randString)
 }
+
+alert("Password Generator!")
+alert("You must choose between 8-128 chars, and at least one special variant for your password!")
+
+
+
+var pwLength = prompt("Pick a length between 8 and 128 characters: ")
+
+while (pwLength < 8 || pwLength > 128) {
+    prompt("You must choose between 8 and 128 characters: ")
+}
+
+do {
+var spChar=confirm("Would you like to include special characters?")
+var numChar=confirm("Would you like to include numbers?")
+var upChar=confirm("Would you like to include uppercase characters as well?")
+} while (spChar===false && numChar===false && upChar===false) 
+
+    alert("Settings confirmed, generating password now")
+
+    if (spChar===true && numChar===true && upChar===true) {
+       allTrue()
+    } else if (spChar===true && numChar===false && upChar===true) {
+        spUpCharTrue()
+    } else if (spChar===false && numChar===true && upChar===true) {
+        numUpCharTrue()
+    } else if (spChar===true && numChar===true && upChar===false) {
+        spNumCharTrue()
+    } else if (spChar===true && numChar===false && upChar===false) {
+        spTrue()
+    } else if (spChar===false && numChar===true && upChar===false) {
+        numTrue()
+    } else {
+        upTrue()
+    }
+
+
+    
