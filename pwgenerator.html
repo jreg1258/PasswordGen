@@ -10,48 +10,6 @@
     
     <script>
 
-
-function allTrue() {
-    var specials = ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
-    var stringLength = pwLength
-    var randString = " "
-    for (var i=0;i < stringLength; i++) {
-        var randNum = Math.floor(Math.random() * stringLength)
-        randString += specials.toString().substring(randNum,randNum+1)
-        } console.log(randString)
-}
-
-function spUpCharTrue() {
-    var specials = ["!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
-    var stringLength = pwLength
-    var randString = " "
-    for (var i=0;i < stringLength; i++) {
-        var randNum = Math.floor(Math.random() * stringLength)
-        randString += specials.toString().substring(randNum,randNum+1)
-        } console.log(randString)
-}
-
-function numUpCharTrue() {
-    var specials = ["0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
-    var stringLength = pwLength
-    var randString = " "
-    for (var i=0;i < stringLength; i++) {
-        var randNum = Math.floor(Math.random() * stringLength)
-        randString += specials.toString().substring(randNum,randNum+1)
-        } console.log(randString)
-} 
-
-function spNumCharTrue() {
-    var specials = ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyz"]
-    var stringLength = pwLength
-    var randString = " "
-    for (var i=0;i < stringLength; i++) {
-        var randNum = Math.floor(Math.random() * stringLength)
-        randString += specials.toString().substring(randNum,randNum+1)
-        } console.log(randString)
-}
-
-
 alert("Password Generator!")
 alert("You must choose between 8-128 chars, and at least one special variant for your password!")
 
@@ -79,8 +37,12 @@ var upChar=confirm("Would you like to include uppercase characters as well?")
         numUpCharTrue()
     } else if (spChar===true && numChar===true && upChar===false) {
         spNumCharTrue()
+    } else if (spChar===true && numChar===false && upChar===false) {
+        spTrue()
+    } else if (spChar===false && numChar===true && upChar===false) {
+        numTrue()
     } else {
-        
+        upTrue()
     }
 
 
