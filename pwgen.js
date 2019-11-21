@@ -31,7 +31,7 @@ var randomPassGen = {
             this.cpybtn.setAttribute("type", "button")
             this.cpybtn.setAttribute("class", "btn btn-primary btn-lg btn-block")
             this.cpybtn.setAttribute("onclick", "randomPassGen.copyPass()")
-            this.cpybtn.textContent = "Copy!"
+            this.cpybtn.textContent = "Copy Generated Password"
             this.divTag.appendChild(this.ppTag)
             this.divTag.appendChild(this.pTag)
             this.divTag.appendChild(this.cpybtn)
