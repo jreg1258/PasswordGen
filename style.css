@@ -1,11 +1,10 @@
 p {
     color: blue;
     font-size: 16px;
+    margin: auto;
 }
 
 div {
-    height: 200px;
-    width: 200px;
     text-align: center;
     padding-top: 100px;
     margin: auto;

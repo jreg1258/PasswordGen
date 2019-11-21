@@ -3,11 +3,17 @@ alert("You must choose between 8-128 chars, and at least one special variant for
 
 
 var randomPassGen = {
-        stringLength : prompt("Pick a length between 8 and 128 characters: "),
+        stringLength : " ",
         randString : " ",
         pTag : document.createElement("p"),
         divTag : document.createElement("div"),
         cpybtn : document.createElement("button"),
+        
+        askLength : function() {
+            this.stringLength = prompt("Pick a length between 8 and 128 characters: ")
+            console.log(randomPassGen.stringLength)
+        },
+
         randomizer : function() {
             for (var i=0;i < this.stringLength; i++) {
             var randNum = Math.floor(Math.random() * this.stringLength)
@@ -34,11 +40,12 @@ var randomPassGen = {
             this.divTag.appendChild(this.cpybtn)
         },  
 }
+randomPassGen.askLength()
  
 
-for (;stringLength < 8 || isNaN(stringLength) || stringLength > 128;) {
+for (;randomPassGen.stringLength < 8 || isNaN(randomPassGen.stringLength) || randomPassGen.stringLength > 128;) {
     alert("You must choose a number between 8 and 128. Use of text strings are also restricted.")
-    var stringLength = prompt("Pick a number length between 8 and 128 characters: ")
+    randomPassGen.askLength()
 }
 
 do {
