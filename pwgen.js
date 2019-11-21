@@ -1,5 +1,4 @@
 
-var pwGen = {
 function allTrue() {
     var specials = ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
     var stringLength = pwLength
@@ -7,7 +6,11 @@ function allTrue() {
     for (var i=0;i < stringLength; i++) {
         var randNum = Math.floor(Math.random() * stringLength)
         randString += specials.toString().substring(randNum,randNum+1)
-        } document.write(randString)
+        }   var pTag = document.createElement("p")
+            var divTag = document.createElement("div")    
+                pTag.textContent = randString
+            document.body.appendChild(divTag)
+            document.body.divTag.appendChild(pTag)
             console.log(randString)
 }
 
@@ -70,17 +73,12 @@ function upTrue() {
         randString += specials.toString().substring(randNum,randNum+1)
         } document.write(randString)
 }
-}
+
 
 function copyPass() {
-    /* Get the text field */
-    var copyText = document.getElementById("pwDone");
+    
   
-    /* Select the text field */
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
-  
-    /* Copy the text inside the text field */
+   document.getElementById()
     document.execCommand("copy");
   
     /* Alert the copied text */
@@ -121,7 +119,5 @@ var upChar=confirm("Would you like to include uppercase characters as well?")
     } else {
         upTrue()
     }
-
-    document.getElementById("pwDone").innerHTML === randString
 
     
