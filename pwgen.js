@@ -1,97 +1,34 @@
+var randomPassGen = {
+        stringLength : document.pwLength,
+        randString : " ",
+        pTag : document.createElement("p"),
+        divTag : document.createElement("div"),
+        cpybtn : document.createElement("button"),
+        randomizer : function() {
+            for (var i=0;i < this.stringLength; i++) {
+            var randNum = Math.floor(Math.random() * this.stringLength)
+            this.randString += document.specials.toString().substring(randNum,randNum+1)
+            } console.log(this.randString)
+        },
 
-function allTrue() {
-    var specials = ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
-    var stringLength = pwLength
-    var randString = " "
-    for (var i=0;i < stringLength; i++) {
-        var randNum = Math.floor(Math.random() * stringLength)
-        randString += specials.toString().substring(randNum,randNum+1)
-        }   var pTag = document.createElement("p")
-            var divTag = document.createElement("div")
-            var cpybtn = document.createElement("button")
-                pTag.textContent = "Here is your password!" + randString
-            document.body.appendChild(divTag)
-            pTag.setAttribute("id","passW")
-            cpybtn.setAttribute("type", "button")
-            cpybtn.setAttribute("class", "btn btn-primary btn-lg btn-block")
-            cpybtn.setAttribute("onclick", "copyPass()")
-            cpybtn.textContent = "Copy!"
-            divTag.appendChild(pTag)
-            divTag.appendChild(cpybtn)
-            console.log(randString)
+        copyPass : function() {
+            document.getElementById(passW)
+            document.execCommand("copy");
+            alert("Copied the text: " + copyText.value);
+        },
+
+        pageCreate : function() {
+            this.pTag.textContent = "Here is your password!" + this.randString
+            document.body.appendChild(this.divTag)
+            this.pTag.setAttribute("id","passW")
+            this.cpybtn.setAttribute("type", "button")
+            this.cpybtn.setAttribute("class", "btn btn-primary btn-lg btn-block")
+            this.cpybtn.setAttribute("onclick", "randomPassGen.copyPass()")
+            this.cpybtn.textContent = "Copy!"
+            this.divTag.appendChild(this.pTag)
+            this.divTag.appendChild(this.cpybtn)
+        },  
 }
-
-function spUpCharTrue() {
-    var specials = ["!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
-    var stringLength = pwLength
-    var randString = " "
-    for (var i=0;i < stringLength; i++) {
-        var randNum = Math.floor(Math.random() * stringLength)
-        randString += specials.toString().substring(randNum,randNum+1)
-        } document.write(randString)
-}
-
-function numUpCharTrue() {
-    var specials = ["0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
-    var stringLength = pwLength
-    var randString = " "
-    for (var i=0;i < stringLength; i++) {
-        var randNum = Math.floor(Math.random() * stringLength)
-        randString += specials.toString().substring(randNum,randNum+1)
-        } document.write(randString)
-} 
-
-function spNumCharTrue() {
-    var specials = ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyz"]
-    var stringLength = pwLength
-    var randString = " "
-    for (var i=0;i < stringLength; i++) {
-        var randNum = Math.floor(Math.random() * stringLength)
-        randString += specials.toString().substring(randNum,randNum+1)
-        } document.write(randString)
-}
-
-function spTrue() {
-    var specials = ["!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyz"]
-    var stringLength = pwLength
-    var randString = " "
-    for (var i=0;i < stringLength; i++) {
-        var randNum = Math.floor(Math.random() * stringLength)
-        randString += specials.toString().substring(randNum,randNum+1)
-        } document.write(randString)
-}
-
-function numTrue() {
-    var specials = ["0123456789abcdefghijklmnopqrstuvwxyz"]
-    var stringLength = pwLength
-    var randString = " "
-    for (var i=0;i < stringLength; i++) {
-        var randNum = Math.floor(Math.random() * stringLength)
-        randString += specials.toString().substring(randNum,randNum+1)
-        } document.write(randString)
-}
-
-function upTrue() {
-    var specials = ["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"]
-    var stringLength = pwLength
-    var randString = " "
-    for (var i=0;i < stringLength; i++) {
-        var randNum = Math.floor(Math.random() * stringLength)
-        randString += specials.toString().substring(randNum,randNum+1)
-        } document.write(randString)
-}
-
-
-function copyPass() {
-    
-  
-   document.getElementById(passW)
-    document.execCommand("copy");
-  
-    /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
-  }
-
 alert("Password Generator!")
 alert("You must choose between 8-128 chars, and at least one special variant for your password!")
 
@@ -113,19 +50,26 @@ var upChar=confirm("Would you like to include uppercase characters as well?")
     alert("Settings confirmed, generating password now")
 
     if (spChar===true && numChar===true && upChar===true) {
-        allTrue()
+        var specials = ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+        randomPassGen.randomizer()
     } else if (spChar===true && numChar===false && upChar===true) {
-        spUpCharTrue()
+        var specials = ["!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+        randomPassGen.randomizer()
     } else if (spChar===false && numChar===true && upChar===true) {
-        numUpCharTrue()
+        var specials = ["0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+        randomPassGen.randomizer()
     } else if (spChar===true && numChar===true && upChar===false) {
-        spNumCharTrue()
+        var specials = ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyz"]
+        randomPassGen.randomizer()
     } else if (spChar===true && numChar===false && upChar===false) {
-        spTrue()
+        var specials = ["!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyz"]
+        randomPassGen.randomizer()
     } else if (spChar===false && numChar===true && upChar===false) {
-        numTrue()
+        var specials = ["0123456789abcdefghijklmnopqrstuvwxyz"]
+        randomPassGen.randomizer()
     } else {
-        upTrue()
+        var specials = ["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"]
+        randomPassGen.randomizer()    
     }
 
-    
+    randomPassGen.pageCreate()
