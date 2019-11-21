@@ -6,6 +6,7 @@ var randomPassGen = {
         stringLength : " ",
         randString : " ",
         pTag : document.createElement("p"),
+        ppTag : document.createElement("p"),
         divTag : document.createElement("div"),
         cpybtn : document.createElement("button"),
         
@@ -22,23 +23,25 @@ var randomPassGen = {
                 console.log(specials)
         },
 
-        copyPass : function() {
-            document.getElementById(passW)
-            document.execCommand("copy");
-            alert("Copied the text: " + copyText.value);
-        },
-
         pageCreate : function() {
-            this.pTag.textContent = "Here is your password!" + this.randString
+            this.ppTag.textContent = "Here is your password!" 
+            this.pTag.textContent = this.randString
             document.body.appendChild(this.divTag)
             this.pTag.setAttribute("id","passW")
             this.cpybtn.setAttribute("type", "button")
             this.cpybtn.setAttribute("class", "btn btn-primary btn-lg btn-block")
             this.cpybtn.setAttribute("onclick", "randomPassGen.copyPass()")
             this.cpybtn.textContent = "Copy!"
+            this.divTag.appendChild(this.ppTag)
             this.divTag.appendChild(this.pTag)
             this.divTag.appendChild(this.cpybtn)
         },  
+
+        copyPass : function() {
+            document.getElementById(passW)
+            document.execCommand("copy");
+            alert("Copied the text: " + copyText.value);
+        },
 }
 randomPassGen.askLength()
  
