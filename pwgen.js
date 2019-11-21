@@ -29,7 +29,7 @@ var randomPassGen = {
             document.body.appendChild(this.divTag)
             this.pTag.setAttribute("id","passW")
             this.cpybtn.setAttribute("type", "button")
-            this.cpybtn.setAttribute("class", "btn btn-primary btn-lg btn-block")
+            this.cpybtn.setAttribute("class", "btn btn-danger btn-outline-dark btn-lg")
             this.cpybtn.setAttribute("onclick", "randomPassGen.copyPass()")
             this.cpybtn.textContent = "Copy Generated Password"
             this.divTag.appendChild(this.ppTag)
@@ -38,9 +38,10 @@ var randomPassGen = {
         },  
 
         copyPass : function() {
-            document.getElementById(passW)
-            document.execCommand("copy");
-            alert("Copied the text: " + copyText.value);
+            var copyText = document.querySelector("#passW")
+            copyText.select()
+            document.execCommand("copy")
+            alert("Copied the text");
         },
 }
 randomPassGen.askLength()
@@ -83,3 +84,4 @@ var upChar=confirm("Would you like to include uppercase characters as well?")
     }
 
     randomPassGen.pageCreate()
+    
