@@ -11,7 +11,10 @@ function allTrue() {
             var cpybtn = document.createElement("button")
                 pTag.textContent = "Here is your password!" + randString
             document.body.appendChild(divTag)
-            cpybtn.setAttribute("button", "type:button; class:btn btn-primary btn-lg btn-block; onclick:copyPass()")
+            pTag.setAttribute("id","passW")
+            cpybtn.setAttribute("type", "button")
+            cpybtn.setAttribute("class", "btn btn-primary btn-lg btn-block")
+            cpybtn.setAttribute("onclick", "copyPass()")
             cpybtn.textContent = "Copy!"
             divTag.appendChild(pTag)
             divTag.appendChild(cpybtn)
@@ -82,7 +85,7 @@ function upTrue() {
 function copyPass() {
     
   
-   document.getElementById()
+   document.getElementById(passW)
     document.execCommand("copy");
   
     /* Alert the copied text */
@@ -94,10 +97,10 @@ alert("You must choose between 8-128 chars, and at least one special variant for
 
 
 
-var pwLength = prompt("Pick a length between 8 and 128 characters: ")
+var pwLength = prompt("Pick a password length between 8 and 128 characters: ")
 
-while (pwLength < 8 || pwLength > 128) {
-    prompt("You must choose between 8 and 128 characters: ")
+while (pwLength < 8 || pwLength > 128 || pwLength = " ") {
+    prompt("You must choose a number between 8 and 128 characters: ")
 }
 
 do {
