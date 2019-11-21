@@ -13,4 +13,9 @@ div {
 #passW {
     color: blue;
     font-size: 16px;
+    padding: 25px;
+}
+
+button {
+    width: 200px;
 }
