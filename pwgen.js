@@ -97,10 +97,11 @@ alert("You must choose between 8-128 chars, and at least one special variant for
 
 
 
-var pwLength = prompt("Pick a password length between 8 and 128 characters: ")
+var pwLength = prompt("Pick a length between 8 and 128 characters: ")
 
-while (pwLength < 8 || pwLength > 128 || pwLength = " ") {
-    prompt("You must choose a number between 8 and 128 characters: ")
+for (;pwLength < 8 || isNaN(pwLength) || pwLength > 128;) {
+    alert("You must choose a number between 8 and 128. Use of text strings are also restricted.")
+    var pwLength = prompt("Pick a number length between 8 and 128 characters: ")
 }
 
 do {
