@@ -10,6 +10,7 @@ var randomPassGen = {
         divTag : document.createElement("div"),
         cpybtn : document.createElement("button"),
         
+
         askLength : function() {
             this.stringLength = prompt("Pick a length between 8 and 128 characters: ")
             console.log(randomPassGen.stringLength)
@@ -44,6 +45,7 @@ var randomPassGen = {
             alert("Copied the text");
         },
 }
+
 randomPassGen.askLength()
  
 
