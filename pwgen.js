@@ -7,10 +7,14 @@ function allTrue() {
         var randNum = Math.floor(Math.random() * stringLength)
         randString += specials.toString().substring(randNum,randNum+1)
         }   var pTag = document.createElement("p")
-            var divTag = document.createElement("div")    
-                pTag.textContent = randString
+            var divTag = document.createElement("div")
+            var cpybtn = document.createElement("button")
+                pTag.textContent = "Here is your password!" + randString
             document.body.appendChild(divTag)
-            document.body.divTag.appendChild(pTag)
+            cpybtn.setAttribute("button", "type:button; class:btn btn-primary btn-lg btn-block; onclick:copyPass()")
+            cpybtn.textContent = "Copy!"
+            divTag.appendChild(pTag)
+            divTag.appendChild(cpybtn)
             console.log(randString)
 }
 
