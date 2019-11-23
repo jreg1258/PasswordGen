@@ -5,7 +5,7 @@ alert("You must choose between 8-128 chars, and at least one special variant for
 var randomPassGen = {
         stringLength : " ",
         randString : " ",
-        pTag : document.createElement("p"),
+        textTag : document.createElement("textarea"),
         ppTag : document.createElement("p"),
         divTag : document.createElement("div"),
         cpybtn : document.createElement("button"),
@@ -26,25 +26,20 @@ var randomPassGen = {
 
         pageCreate : function() {
             this.ppTag.textContent = "Here is your password!" 
-            this.pTag.textContent = this.randString
-            document.body.appendChild(this.divTag)
-            this.pTag.setAttribute("id","passW")
+            this.textTag.textContent = this.randString
+            this.textTag.setAttribute("id","passW")
             this.cpybtn.setAttribute("type", "button")
             this.cpybtn.setAttribute("class", "btn btn-danger btn-outline-dark btn-lg")
-            this.cpybtn.setAttribute("onclick", "randomPassGen.copyPass()")
+            this.cpybtn.setAttribute("onclick", "copyPass()")
             this.cpybtn.textContent = "Copy Generated Password"
+            document.body.appendChild(this.divTag)
             this.divTag.appendChild(this.ppTag)
-            this.divTag.appendChild(this.pTag)
+            this.divTag.appendChild(this.textTag)
             this.divTag.appendChild(this.cpybtn)
         },  
 
-        copyPass : function() {
-            var copyText = document.querySelector("#passW")
-            copyText.select()
-            document.execCommand("copy")
-            alert("Copied the text");
-        },
-}
+        }
+    
 
 randomPassGen.askLength()
  
@@ -85,5 +80,14 @@ var upChar=confirm("Would you like to include uppercase characters as well?")
         randomPassGen.randomizer()    
     }
 
+    function copyPass () {
+        var copyText = document.querySelector("#passW").select()
+
+        document.execCommand("copy")
+        } 
+
+    
     randomPassGen.pageCreate()
     
+    
+        
