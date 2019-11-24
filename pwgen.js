@@ -9,6 +9,7 @@ var randomPassGen = {
         ppTag : document.createElement("p"),
         divTag : document.createElement("div"),
         cpybtn : document.createElement("button"),
+        br : document.createElement("br"),
         
 
         askLength : function() {
@@ -35,6 +36,7 @@ var randomPassGen = {
             document.body.appendChild(this.divTag)
             this.divTag.appendChild(this.ppTag)
             this.divTag.appendChild(this.textTag)
+            this.divTag.appendChild(this.br)
             this.divTag.appendChild(this.cpybtn)
         },  
 
