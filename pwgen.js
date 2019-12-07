@@ -60,13 +60,13 @@ var upChar=confirm("Would you like to include uppercase characters as well?")
     alert("Settings confirmed, generating password now")
 
     if (spChar===true && numChar===true && upChar===true) {
-        var specials = ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+        var specials = ["0123456789!@#$%^&*?/\<>`~ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
         randomPassGen.randomizer()
     } else if (spChar===true && numChar===false && upChar===true) {
-        var specials = ["!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+        var specials = ["!@#$%^&*?/\<>`~ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
         randomPassGen.randomizer()
     } else if (spChar===false && numChar===true && upChar===true) {
-        var specials = ["0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+        var specials = ["0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
         randomPassGen.randomizer()
     } else if (spChar===true && numChar===true && upChar===false) {
         var specials = ["0123456789!@#$%^&*?/\<>`~abcdefghijklmnopqrstuvwxyz"]
@@ -78,7 +78,7 @@ var upChar=confirm("Would you like to include uppercase characters as well?")
         var specials = ["0123456789abcdefghijklmnopqrstuvwxyz"]
         randomPassGen.randomizer()
     } else {
-        var specials = ["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"]
+        var specials = ["abcdefghijklmnopqrstuvwxyz"]
         randomPassGen.randomizer()    
     }
 
